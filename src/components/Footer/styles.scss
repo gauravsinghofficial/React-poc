@@ -1,0 +1,24 @@
+@import '../Navbar/styles.scss';
+.footer {
+    background-color: $websitecolor;
+    padding: 33px;
+    margin-top: 44px;
+}
+
+.footer  img {
+    width: 22%;
+    margin-left: 39%;
+    border-top: 2px solid gray ;
+}
+
+.footer .icon {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+.icon .i {
+    margin-inline: 22px;
+    font-size: 26px;
+    color: gray
+}

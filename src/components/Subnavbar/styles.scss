@@ -1,0 +1,78 @@
+.subnavbar {
+    position: relative;
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    background-color: #222539;
+}
+
+.navitem {
+    position: relative;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    left: 138px;
+    padding-top: 10px;
+}
+
+ul.navitem li {
+    display: inline;
+}
+
+.navitem li a {
+    display: inline;
+    text-decoration: none;
+    color: #c8c8c3;
+    font-size: 14px;
+    padding: 8px;
+}
+
+.navitem li a span {
+    padding-bottom: 12px;
+    font-size: 7px;
+    color: #c4242b;
+    font-weight: 600;
+    position: absolute;
+    top: 5px;
+    left: 110px;
+}
+
+.navitem li a:hover {
+    color: white;
+}
+
+.navitem1 {
+    position: relative;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    right: 136px;
+    padding-top: 10px;
+}
+
+ul.navitem1 li {
+    display: inline;
+}
+
+.navitem1 li a {
+    display: inline;
+    text-decoration: none;
+    color: white;
+    font-size: 12px;
+    padding: 10px;
+}
+
+.navitem1 li a span {
+    padding-bottom: 12px;
+    font-size: 7px;
+    color: #c4242b;
+    font-weight: 600;
+    position: absolute;
+    top: 6px;
+    left: 75px;
+}
+
+.navitem1 li a:hover {
+    color: white;
+}
