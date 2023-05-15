@@ -1,0 +1,213 @@
+.dg-criteria {
+    background-color: rgb(45, 44, 44);
+    color: white;
+    padding: 10px;
+    .dg-criteria-heading {
+        background-color: black;
+        border-bottom: 1px solid gray;
+    }
+    .guide-lines-header {
+        text-align: center;
+    }
+    .subHeading {
+        font-size: 20px;
+    }
+    .guide-lines-header-content-date {
+        font-size: 25px;
+    }
+    .guide-lines-content-tagline {
+        padding: 10px;
+        font-family: cursive;
+        border-bottom: 1px solid gray;
+    }
+    .dg-criteria-content {
+        display: flex;
+        flex: 10;
+        padding: 10px;
+    }
+    .guide-lines {
+        display: flex;
+        flex: 5;
+        flex-direction: column;
+        color: white;
+        border-right: 1px solid gray;
+    }
+    .criteria {
+        color: white;
+        display: flex;
+        flex: 8;
+        flex-direction: column;
+    }
+    .list-item-template {
+        color: white;
+    }
+    .button-apply {
+        display: flex;
+        justify-content: flex-end;
+        padding: 20px 5px;
+    }
+    .dx-button-content {
+        background-color: rgb(45, 44, 44);
+        color: white;
+        border: 1px solid white;
+    }
+    .dx-button-content:hover {
+        opacity: 0.5;
+        background-color: black;
+    }
+    .dx-texteditor-container {
+        background-color: rgb(45, 44, 44);
+        border: none;
+    }
+
+    .dx-list-item {
+        border-top: none;
+    }
+    .criteria .dx-list-item {
+        border-top: 1px solid gray;
+    }
+    .guide-lines .dx-list-item-selected {
+        border-left: 4px solid orange;
+    }
+    .dx-list-item-selected span {
+        color: white;
+    }
+    .dx-button-mode-contained .dx-icon {
+        color: white;
+    }
+
+    .dx-texteditor.dx-editor-outlined {
+        background-color: #333;
+        color: white;
+        border: none;
+    }
+    .dx-texteditor-buttons-container > .dx-button.dx-button-has-icon:not(.dx-button-has-text) > .dx-button-content {
+        border: none;
+    }
+    .dx-button {
+        border: none;
+    }
+    .dx-texteditor-input {
+        color: white;
+    }
+
+    .dx-icon-check {
+        color: white;
+        margin-left: 50px;
+    }
+}
+.dx-popup-content {
+    padding: 0;
+}
+.dx-overlay-wrapper {
+    color: white;
+}
+.container-loader .button-content {
+    margin-top: 280px;
+    margin-left: 50px;
+}
+.container-loader .button-content .button-loader {
+    padding-left: 120px;
+}
+.container-loader .button-content .content-loader {
+    color: gray;
+}
+.dx-loadpanel-content-wrapper {
+    padding-left: 250px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: #333;
+    float: right;
+}
+
+.modal-content {
+    display: flex;
+    background-color: #333;
+    // padding: 20px;
+    border: 1px solid #888;
+    // width: 30%;
+    float: right;
+}
+
+.dialog_container {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid gray;
+}
+.dialog-content {
+    width: 70%;
+    text-align: center;
+}
+.dialog-content p {
+    margin-left: 40px;
+    width: 80%;
+}
+
+.close {
+    color: #aaaaaa;
+    float: right;
+    // left: 100px;
+    font-size: 28px;
+    font-weight: bold;
+    transform: rotate(120deg);
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+.myModal {
+    display: block;
+}
+
+.dx-loadindicator-segment {
+    background-color: orange !important;
+}
+.guide-lines .badge {
+    position: absolute;
+    float: right;
+    width: 5px;
+    height: 5px;
+    right: 20%;
+    border-radius: 50%;
+    background-color: #57d957;
+}
+
+.searchContent {
+    display: flex;
+}
+
+.select-criteria {
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+    margin-left: 10px;
+}
+
+.dx-icon-chevronright {
+    margin-top: 5px;
+    margin-left: 10px;
+}
+.dx-icon-remove {
+    margin-top: 5px;
+    margin-left: 10px;
+}
+.dx-texteditor.dx-editor-outlined{
+    background-color: #222;
+    color: white;
+    border: none;
+    border-bottom: 1px solid white;
+}
