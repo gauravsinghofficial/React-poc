@@ -35,7 +35,6 @@ const DiagnosticCriteria = () => {
   // const popupRef = useRef();
   // const guideLineListRef = useRef();
 
-  console.log(criteriaData);
   const handlePopupOpen = () => {
     setPopupOpen(true);
   };
@@ -108,7 +107,7 @@ const DiagnosticCriteria = () => {
       setShowLoader(false);
       setDialogboxContent("Processing completed");
       setDialogBoxLoader(false);
-    }, 5000);
+    }, 0);
     setDialogboxContent("Diagonis criteria is being processed");
     setDialogBoxLoader(true);
   };
@@ -120,10 +119,7 @@ const DiagnosticCriteria = () => {
     setGuideLine(item);
     setCriteriaData(item.data);
     setTestData((d) => [...d, lbl]);
-    console.log(dataTest);
   };
-
-  // console.log(dataTest);
 
   const onCriteriaChange = (e) => {
     let item = e.addedItems[0];
@@ -147,7 +143,6 @@ const DiagnosticCriteria = () => {
     setSelectedGuidLine(guideLine);
     // popupRef.current.instance.hide();
     setPopupOpen(false);
-
   };
 
   const handleClearCriteria = (e) => {
@@ -159,7 +154,7 @@ const DiagnosticCriteria = () => {
   };
 
   const renderContent = () => (
-    <div className="dg-criteria">
+    <div className="dg-criteria" data-testid="pop-up">
       <h2 className="dg-criteria-heading">Select diagnosis criteria</h2>
       <div className="dg-criteria-content">
         <div className="guide-lines">
@@ -206,6 +201,7 @@ const DiagnosticCriteria = () => {
           ) : (
             <div id="listData">
               <List
+                data-testid="Criteria"
                 dataSource={criteriaData}
                 selectedItemKeys={[criteria]}
                 height={400}
@@ -228,7 +224,11 @@ const DiagnosticCriteria = () => {
                 </SearchEditorOptions>
               </List>
               <div className="button-apply">
-                <Button text="Apply" onClick={onClickApplyBtn} />
+                <Button
+                  data-testid="Apply"
+                  text="Apply"
+                  onClick={onClickApplyBtn}
+                />
               </div>
             </div>
           )}
@@ -239,6 +239,7 @@ const DiagnosticCriteria = () => {
 
   return (
     <>
+      <div data-testid="outside-area"></div>
       {dialogbox ? <DialogBox /> : null}
       <div
         style={{
@@ -259,7 +260,7 @@ const DiagnosticCriteria = () => {
           onFocusIn={handlePopUp}
         >
           <div className="select-criteria">
-            <p onClick={handlePopupOpen}>
+            <p data-testid="Select-Criteria" onClick={handlePopupOpen}>
               {/* {guideLine?.label ? guideLine?.label : null}{" "}
               {guideLine?.label ? "|   " : null}              
               {criteria?.label || "Select Criteria"} */}
