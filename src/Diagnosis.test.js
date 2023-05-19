@@ -124,4 +124,41 @@ describe("DiagnosticCriteria", () => {
       expect(screen.getByText("Syncope")).toBeInTheDocument();
     }, 1000);
   });
+  test("Dialog box should open when handlePopupOpen is called", async () => {
+    // Render the component
+    render(<DiagnosticCriteria />);
+
+    // Get the select criteria element
+    const selectCriteriaElement = screen.getByTestId("Select-Criteria");
+    fireEvent.click(selectCriteriaElement);
+
+    setTimeout(() => {
+      const guidelineItem = screen.getByText("Tree Data2");
+      fireEvent.click(guidelineItem);
+
+      const loaderBtn = screen.getByTestId("ok-button");
+      userEvent.click(loaderBtn);
+      //Check if the dialog box is open
+      const dialogBoxElement = screen.getByTestId("myModal");
+      expect(dialogBoxElement).toBeInTheDocument();
+    }, 1000);
+  });
+  test("displays dialog box with correct content when dialogbox is true", async () => {
+    render(<DiagnosticCriteria />);
+    const selectCriteriaText = screen.getByTestId("Select-Criteria");
+    fireEvent.click(selectCriteriaText);
+
+    setTimeout(() => {
+      const guidelineItem = screen.getByText("Tree Data2");
+      fireEvent.click(guidelineItem);
+
+      const loaderBtn = screen.getByTestId("ok-button");
+      userEvent.click(loaderBtn);
+    }, 1000);
+
+    await waitFor(() => {
+      const dialogBox = screen.queryByTestId("myModal");
+      expect(dialogBox).toBeInTheDocument();
+    });
+  });
 });

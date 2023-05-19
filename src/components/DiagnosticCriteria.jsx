@@ -32,9 +32,6 @@ const DiagnosticCriteria = () => {
     setDialogBox(true);
   };
 
-  // const popupRef = useRef();
-  // const guideLineListRef = useRef();
-
   const handlePopupOpen = () => {
     setPopupOpen(true);
   };
@@ -107,7 +104,7 @@ const DiagnosticCriteria = () => {
       setShowLoader(false);
       setDialogboxContent("Processing completed");
       setDialogBoxLoader(false);
-    }, 0);
+    }, 5000);
     setDialogboxContent("Diagonis criteria is being processed");
     setDialogBoxLoader(true);
   };
